@@ -3,8 +3,10 @@ import os
 import numpy as np
 from textToVector import getEmbeddings
 import json
+from dotenv import load_dotenv
 
-# chan
+load_dotenv()
+
 uri = os.environ["DB_URI"] 
 
 client = pymongo.MongoClient(uri,tls=True, tlsAllowInvalidCertificates=True)
